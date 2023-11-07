@@ -13,3 +13,4 @@ class Clock:
 c = Clock("Amand", "Rolex", 2008, 120, "hand")
 
 print(c)
+
