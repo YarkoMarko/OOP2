@@ -1,16 +1,35 @@
-# This is a sample Python script.
+class Human:
+    def __init__(self, name, age, ID, address):
+        self._name = name
+        self._age = age
+        self._ID = ID
+        self._address = address
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    def __str__(self):
+        return f"Name: {self._name}\nAge: {self._age}\nID: {self._ID}\nAddress: {self._address}"
+
+    def get_age(self):
+        return self._age
+
+    def __lt__(self, other):
+        return self.get_age() < other.get_age()
+
+    def __le__(self, other):
+        return self.get_age() <= other.get_age()
+
+    def __gt__(self, other):
+        return self.get_age() > other.get_age()
+
+    def __ge__(self, other):
+        return self.get_age() >= other.get_age()
+
+    def __eq__(self, other):
+        return self.get_age() == other.get_age()
+
+    def __ne__(self, other):
+        return self.get_age() != other.get_age()
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+h = Human("Olexiy", 25, "34DFaQ1", "Grushevskogo 13")
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(h)
